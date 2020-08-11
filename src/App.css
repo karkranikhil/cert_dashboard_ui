@@ -1,0 +1,24 @@
+.main-content-bg-color {
+  background: #d0d7dd;
+}
+.filter-section {
+  background: #262a34;
+  margin: 0rem -15px;
+  padding: 15px;
+  color: #fff;
+}
+.cert__box{
+  display:flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-height: 60vh;
+  width:100%;
+}
+.cart__card{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.marginTop20{
+      margin-top: -20px;
+}

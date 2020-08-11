@@ -1,0 +1,51 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 1px 1px 5px #111112;
+}
+.modal-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.card__header {
+  background: #0070ad;
+  padding: 1rem 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card__body {
+  display: block;
+  padding: 1rem 0.5rem;
+}
+.card__img {
+  width: 80px;
+  max-width: 80px;
+  min-width: 80px;
+  
+}
+.card_round{
+  border-radius: 50%;
+}
+.card__label {
+  font-weight: 600;
+}
+.footer__text {
+  text-align: right;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+.footer__text:hover {
+  color: #0070ad;
+}
+.modal_head{
+      display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

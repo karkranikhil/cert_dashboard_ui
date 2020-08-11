@@ -1,0 +1,27 @@
+.header__logo {
+  width: 162px;
+  margin: 0;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  background: 0 0;
+  padding-bottom: 16px;
+  display: flex;
+  order: 3;
+  flex-grow: 2;
+  text-align: right;
+  justify-content: space-between;
+  padding: 24px 0 24px 0;
+}
+.App-header {
+  border-bottom: 1px solid #ececec;
+}
+.header__subheader {
+  background-color: #0070ad;
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
