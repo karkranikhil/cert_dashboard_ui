@@ -5,14 +5,12 @@ import "./Header.css";
 function Header() {
   return (
     <>
-      <header className="App-header">
-        <a href="https://www.capgemini.com/au-en/" className="header__logo">
-          <img src={logo} alt="Capgemini Australia" />>
+      <header className="row App-header ">
+        <a href="https://www.capgemini.com/au-en/" className="">
+          <img src={logo} alt="Capgemini Australia" />
         </a>
+        <div className="header__subheader">Salesforce Credential Holder Directory</div>
       </header>
-      <div className="header__subheader">
-        Salesforce Credential Holder Directory
-      </div>
     </>
   );
 }

@@ -1,0 +1,10 @@
+.name_css{
+    color: #16325c;
+    font-weight: 600;
+}
+table tr td{
+    vertical-align: middle !important;
+}
+a{
+  color: #16325c !important;
+}

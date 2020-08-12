@@ -1,11 +1,12 @@
 .main-content-bg-color {
-  background: #d0d7dd;
+ background: aliceblue;
 }
 .filter-section {
-  background: #262a34;
   margin: 0rem -15px;
   padding: 15px;
-  color: #fff;
+  color: #330c39;
+  font-size: 16px;
+    font-weight: 600;
 }
 .cert__box{
   display:flex;
@@ -21,4 +22,33 @@
 }
 .marginTop20{
       margin-top: -20px;
+}
+table{
+  color:#272421!important;
+}
+a{
+  color: #16325c;
+}
+thead>tr{
+      background: #330c39;
+    color: #fff;
+}
+.aligncenter{
+  align-items: center !important;
+}
+.modal_overflow{
+      height: 400px;
+    overflow: auto;
+}
+/* .table thead th {
+    border-bottom: 2px solid #2b0a3d!important;
+}
+.table-bordered th, .table-bordered td {
+    border: 1px solid #2b0a3d!important;
+} */
+.superBadgeList{
+  display: flex;
+    height: 50px;
+    align-items: center;
+    margin: 1rem;
 }

@@ -5,7 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f3f3f3 !important;
+  /* background-image: url('./assets/bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; */
+  background-color: aliceblue;
+  /* background: #330c39; */
 }
 
 code {
@@ -15,9 +20,9 @@ code {
 .bg-white {
   background: #fff;
 }
-.page-background{
+/* .page-background{
       background-color: #2f323e;
-}
+} */
 .min-height100{
   min-height: 100vh;
 }

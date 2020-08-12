@@ -7,7 +7,8 @@ function Card(props) {
     profileData,
     certificationsList,
     badges,
-    isModal
+    isModal,
+    superbadges
   } = props;
   return (
     <div className={`${isModal ? "modal-card" : "card"}`}>
@@ -22,6 +23,9 @@ function Card(props) {
           <div className={`col-9 ${isModal ? 'modal_head' :''}`}>
             <div><span className="card__label">Total Certifications : </span> {certificationsList.length
               ? certificationsList.length
+              : 0}</div>
+            <div><span className="card__label">Total Superbadges : </span> {superbadges.length
+              ? superbadges.length
               : 0}</div>
             <div className="text-capitalize"><span className="card__label">Rank : </span> {badges.RankLabel}</div>
             <div><span className="card__label">Points : </span> {badges.EarnedPointTotal}</div>

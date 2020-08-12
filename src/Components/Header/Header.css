@@ -14,14 +14,15 @@
   padding: 24px 0 24px 0;
 }
 .App-header {
-  border-bottom: 1px solid #ececec;
+    padding: 1rem;
+    background: #330c39;
+    align-items: center;
 }
 .header__subheader {
-  background-color: #0070ad;
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
+      font-size: 2rem;
+    color: #f0f8ff;
+    /* margin: auto; */
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
 }

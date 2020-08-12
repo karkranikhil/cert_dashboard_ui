@@ -6,9 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 ReactDOM.render(
   <React.StrictMode>
-    <div className="container-fluid page-background">
       <App />
-    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );
