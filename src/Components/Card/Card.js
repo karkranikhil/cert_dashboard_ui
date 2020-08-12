@@ -32,7 +32,7 @@ function Card(props) {
       </div>
       {!isModal && certificationsList.length && (
         <div className="footer__text" onClick={() => showModal(props)}>
-          Show All
+          View More
         </div>
       )}
     </div>

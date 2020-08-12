@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Selectbox from "./Components/Selectbox/Selectbox";
-import { LOCATION, CERTIFICATION_LIST } from "./Mock/mock";
+import Spinner from './Components/Spinner/index'
+import { CERTIFICATION_LIST } from "./Mock/mock";
 import Card from "./Components/Card/Card";
 import { USERS_DATA } from "./Mock/mock.js";
 import Modal from "./Components/Modal/Modal";
@@ -11,7 +12,7 @@ function App() {
   const [userDetail, setUserDetails] = useState([]);
   const [modalState, setModalState] = useState(false);
   const [modalData, setModalData] = useState({});
-  const [location, setLocation] = useState("All");
+  const [loader, setLoader] = useState(true);
   const [certName, setCertName] = useState("All");
   useEffect(() => {
     fetch("https://gentle-castle-11457.herokuapp.com/api/users")
@@ -20,49 +21,17 @@ function App() {
         console.log("users fetched...", users);
         if (users && users.length) {
           let result = JSON.parse(users);
-          // let result = users;
-          // let formatedData = result.map(item => {
-          //   if (item.RelatedCertificationStatus.totalSize) {
-          //     let certList = item.RelatedCertificationStatus.records.map(
-          //       cert => cert.ExternalCertificationTypeName
-          //     );
-          //     return { ...item, certList: certList };
-          //   } else {
-          //     return { ...item, certList: [] };
-          //   }
-          // });
           setUserDetails(result);
           setUserOrignalDetails(result);
         }
-      });
+        setLoader(false)
+      }).catch((error)=>{
+        setLoader(false)
+      })
   }, []);
-  // const locationHandler = event => {
-  //   let { value } = event.target;
-  //   console.log("location", value);
-  //   console.log("certName", certName);
-  //   setLocation(value);
-
-  //   if (value === "All" && certName === "All") {
-  //     setUserDetails(userOrignalDetail);
-  //   } else {
-  //     let filteredLocation = userOrignalDetail.filter(item => {
-  //       if (certName === "All") {
-  //         return item.City === value;
-  //       } else {
-  //         let hasCert =
-  //           value === "All"
-  //             ? true
-  //             : item.certList.some(cert => cert === certName);
-  //         return item.City === value && hasCert;
-  //       }
-  //     });
-  //     setUserDetails(filteredLocation);
-  //   }
-  // };
   const certHandler = event => {
     console.log(event.target.value);
     const { value } = event.target;
-    console.log("location", location);
     console.log("certName", value);
     setCertName(value);
     if (value === "All") {
@@ -84,6 +53,7 @@ function App() {
 
   return (
     <div className="container main-content-bg-color min-height100">
+      {loader && <Spinner />}
       <Header></Header>
       <section>
         <div className="filter-section">
@@ -117,6 +87,8 @@ function App() {
               </div>
             ))
             : null}
+
+          {userDetail.length === 0 && !loader && <div>No Data Found!!</div>} 
         </div>
         {modalState&& <Modal show={modalState} handleClose={hideModal}>
           <div className="row">
