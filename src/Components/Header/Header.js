@@ -9,7 +9,7 @@ function Header() {
         <a href="https://www.capgemini.com/au-en/" className="">
           <img src={logo} alt="Capgemini Australia" />
         </a>
-        <div className="header__subheader">Salesforce Credential Holder Directory</div>
+        <div className="header__subheader">Salesforce Credential Holders Directory</div>
       </header>
     </>
   );
