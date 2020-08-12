@@ -11,14 +11,20 @@ function ListView(props) {
         isModal
     } = props;
     const formatedNumber=(n)=>{
-        return Number(parseFloat(n).toFixed(2)).toLocaleString('en');
+        return n ? Number(parseFloat(n).toFixed(2)).toLocaleString('en'): 0
     }
     return (
         <tr>
             <td>{index+1}</td>
             <td className="name_css">
                 <img height="40px" className="rounded-circle mr-2" src={profileData.photo}/>{'  '}
-                {profileData.FirstName + ' ' + profileData.LastName}</td>
+                <div>
+                    <div>{profileData.FirstName + ' ' + profileData.LastName}</div>
+                    <div className="company_name">{profileData.CompanyName}</div>
+                </div>
+                
+                
+                </td>
             <td><img height="40px" src={badges.RankImageUrl} alt={badges.badgeLabel}/></td>
             <td>{formatedNumber(badges.EarnedPointTotal)}</td>
             <td>{badges.EarnedBadgeTotal}</td>

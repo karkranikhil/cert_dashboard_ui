@@ -1,10 +1,16 @@
 .name_css{
     color: #16325c;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 table tr td{
     vertical-align: middle !important;
 }
 a{
   color: #16325c !important;
+}
+.company_name{
+    font-size: .8125rem;
+    color: #757171;
 }

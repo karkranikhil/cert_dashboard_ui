@@ -23,7 +23,7 @@ function App() {
     //   setUserDetails(result);
     //   setUserOrignalDetails(result);
     // }
-    setLoader(false)
+    // setLoader(false)
     fetch("https://gentle-castle-11457.herokuapp.com/api/users")
       .then(res => res.json())
       .then(users => {
