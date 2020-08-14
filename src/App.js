@@ -124,13 +124,13 @@ function App() {
                 {modalData.superbadges.length?
                   modalData.superbadges.map(item => (
                     <div className="superBadgeList"><img height="50px" src={item.Award.ImageUrl} /><div>{item.Award.Label}</div></div>
-                  )):<div className="pl-3 pr-3">No Superbadges</div>}
+                  )) : <div className="pl-3 pr-3">Zero Superbadges</div>}
               </div>
             </div>
             
             <div className="col-12">
               <h4 className="pl-3 pr-3">Certifications</h4>
-              {modalData.certificationsList &&
+                {modalData.certificationsList && modalData.certificationsList.length ? 
                 modalData.certificationsList.map(item => (
                   <div class="media border p-3 aligncenter" key={item.title}>
                     <img height={`${item.title === 'Salesforce Certified JavaScript Developer I' ? '95px' : '70px'}`} src={item.certificationImageUrl} alt={item.title} class="mr-3"/>
@@ -140,7 +140,7 @@ function App() {
                       <p> <small><strong>Date Completed</strong> {' '} <i>{item.dateCompleted}</i></small></p>
                       </div>
                  </div>
-                ))}
+                )) : <div className="pl-3 pr-3">Zero Certifications</div>}
             </div>
             </div>
           </div>
