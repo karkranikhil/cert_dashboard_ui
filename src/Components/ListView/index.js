@@ -13,6 +13,10 @@ function ListView(props) {
     const formatedNumber=(n)=>{
         return n ? Number(parseFloat(n).toFixed(2)).toLocaleString('en'): 0
     }
+    if (profileData.FirstName == 'MANOJ'){
+        console.log(badges)
+    }
+    
     return (
         <tr>
             <td>{index+1}</td>
