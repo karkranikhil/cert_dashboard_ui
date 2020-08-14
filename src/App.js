@@ -18,25 +18,26 @@ function App() {
   useEffect(() => {
     const users = USERS_DATA
     console.log("users fetched...", users);
-    // if (users && users.length) {
-    //   let result = JSON.parse(users);
-    //   setUserDetails(result);
-    //   setUserOrignalDetails(result);
-    // }
-    // setLoader(false)
-    fetch("https://gentle-castle-11457.herokuapp.com/api/users")
-      .then(res => res.json())
-      .then(users => {
-        console.log("users fetched...", users);
-        if (users && users.length) {
-          let result = JSON.parse(users);
-          setUserDetails(result);
-          setUserOrignalDetails(result);
-        }
-        setLoader(false)
-      }).catch((error)=>{
-        setLoader(false)
-      })
+    if (users && users.length) {
+      let result = JSON.parse(users);
+      setUserDetails(result);
+      setUserOrignalDetails(result);
+    }
+    setLoader(false)
+    //https://gentle-castle-11457.herokuapp.com/api/add/angielam
+    // fetch("https://gentle-castle-11457.herokuapp.com/api/users")
+    //   .then(res => res.json())
+    //   .then(users => {
+    //     console.log("users fetched...", users);
+    //     if (users && users.length) {
+    //       let result = JSON.parse(users);
+    //       setUserDetails(result);
+    //       setUserOrignalDetails(result);
+    //     }
+    //     setLoader(false)
+    //   }).catch((error)=>{
+    //     setLoader(false)
+    //   })
   }, []);
   const certHandler = event => {
     console.log(event.target.value);
